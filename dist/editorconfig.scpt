@@ -1,13 +1,8 @@
-JsOsaDAS1.001.00bplist00ÑVscript_œ«'use strict';
+JsOsaDAS1.001.00bplist00ÑVscript_œÖ/*! editorconfig-jxa v0.2.0 */
+'use strict';
 
 !function(exports){
 Object.defineProperty(exports, '__esModule', { value: true });
-
-/*!
- * editorconfig-core-jxa v0.1.0
- * Copyright (c) 2016 Kaito Udagawa
- * Released under the MIT license
- */
 
 function readFileSync (file, encoding) {
   const error = $();
@@ -20,12 +15,6 @@ function readFileSync (file, encoding) {
 var jxaFs = Object.freeze({
 	readFileSync: readFileSync
 });
-
-/*!
- * editorconfig-core-jxa v0.1.0
- * Copyright (c) 2016 Kaito Udagawa
- * Released under the MIT license
- */
 
 function resolve (path) {
   return $(path).stringByStandardizingPath.js
@@ -1518,4 +1507,11 @@ exports.parseSync = parseSync$$1;
 exports.parseFromFiles = parseFromFiles;
 exports.parse = parse$$1;
 }(this)
-                              œÁ jscr  úÞÞ­
+/*!
+ * Copyright (c) 2016 Kaito Udagawa <umireon@gmail.com>
+ * Released under the MIT license
+ *
+ * editorconfig-core-js 0.13.2: EditorConfig Team (MIT)
+ * minimatch 3.0.3: Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me) (ISC)
+ */
+                              œìjscr  úÞÞ­

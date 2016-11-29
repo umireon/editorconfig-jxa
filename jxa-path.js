@@ -1,9 +1,3 @@
-/*!
- * editorconfig-core-jxa v0.1.0
- * Copyright (c) 2016 Kaito Udagawa
- * Released under the MIT license
- */
-
 export function resolve (path) {
   return $(path).stringByStandardizingPath.js
 }

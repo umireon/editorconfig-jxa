@@ -1,9 +1,20 @@
 {
   "name": "editorconfig-jxa",
   "version": "0.2.0",
+  "description": "EditorConfig core library for JXA (JavaScript for Automation) on macOS",
+  "keywords": ["jxa", "osx", "macos"],
+  "homepage": "https://github.com/umireon/editorconfig-core-jxa",
+  "bugs": {
+    "url": "https://github.com/umireon/editorconfig-core-jxa/issues"
+  },
+  "license": "MIT",
+  "author": "Kaito Udagawa <umireon@gmail.com>",
+  "files": [
+    "dist/*"
+  ],
   "main": "dist/editorconfig.js",
   "module": "dist/editorconfig.mjs",
-  "license": "MIT",
+  "repository": "umireon/editorconfig-jxa",
   "scripts": {
     "build": "npm run cjs && npm run es && npm run scpt",
     "cjs": "rollup -c -f cjs -o dist/editorconfig.js",
@@ -23,19 +34,5 @@
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-replace": "^1.1.1"
   },
-  "description": "EditorConfig core library for JXA (JavaScript for Automation) on macOS",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/umireon/editorconfig-core-jxa.git"
-  },
-  "keywords": [
-    "jxa",
-    "osx",
-    "macos"
-  ],
-  "author": "Kaito Udagawa <umireon@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/umireon/editorconfig-core-jxa/issues"
-  },
-  "homepage": "https://github.com/umireon/editorconfig-core-jxa#readme"
+  "os": ["darwin"]
 }

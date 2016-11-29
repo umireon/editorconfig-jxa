@@ -1,15 +1,14 @@
 {
   "name": "editorconfig-jxa",
   "version": "0.2.0",
-  "main": "dist/editorconfig.cjs.js",
-  "module": "dist/editorconfig.es.js",
+  "main": "dist/editorconfig.js",
+  "module": "dist/editorconfig.mjs",
   "license": "MIT",
   "scripts": {
-    "build": "npm run cjs && npm run es && npm run scpt && npm run umd",
-    "cjs": "rollup -c -f cjs -o dist/editorconfig.cjs.js",
-    "es": "rollup -c -f es -o dist/editorconfig.es.js",
-    "scpt": "rollup -c -f cjs --banner '!function(exports){' --outro '}(this)' | osacompile -l JavaScript -o dist/editorconfig.scpt",
-    "umd": "rollup -c -f umd -o dist/editorconfig.js"
+    "build": "npm run cjs && npm run es && npm run scpt",
+    "cjs": "rollup -c -f cjs -o dist/editorconfig.js",
+    "es": "rollup -c -f es -o dist/editorconfig.mjs",
+    "scpt": "rollup -c -f cjs --intro '!function(exports){' --outro '}(this)' | osacompile -l JavaScript -o dist/editorconfig.scpt"
   },
   "devDependencies": {
     "editorconfig": "^0.13.2",

@@ -24,6 +24,6 @@ export default {
       'pkg.version': JSON.stringify(pkg.version)
     }),
     nodeResolve(),
-    commonjs()
+    commonjs(),
   ]
 }

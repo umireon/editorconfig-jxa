@@ -1,5 +1,9 @@
 node_modules
 build
 
-dist/*.cjs.js
-dist/*.es.js
+dist/**/*
+!dist/*.scpt
+
+example/**/*
+!example/*/package.json
+!example/*/index.js

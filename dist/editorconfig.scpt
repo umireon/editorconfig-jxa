@@ -1,6 +1,6 @@
-JsOsaDAS1.001.00bplist00ÑVscript_œº!function(exports){
-'use strict';
+JsOsaDAS1.001.00bplist00ÑVscript_œ«'use strict';
 
+!function(exports){
 Object.defineProperty(exports, '__esModule', { value: true });
 
 /*!
@@ -1410,7 +1410,7 @@ function processOptions (options, filepath) {
   options = options || {};
   return {
     config: options.config || '.editorconfig',
-    version: new version(options.version || pkg.version),
+    version: new version(options.version || "0.13.2"),
     root: resolve(options.root || '/')
   }
 }
@@ -1518,4 +1518,4 @@ exports.parseSync = parseSync$$1;
 exports.parseFromFiles = parseFromFiles;
 exports.parse = parse$$1;
 }(this)
-editorconfig                              œÐjscr  úÞÞ­
+                              œÁ jscr  úÞÞ­

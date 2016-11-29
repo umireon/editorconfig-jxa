@@ -1,6 +1,6 @@
 {
   "name": "editorconfig-jxa",
-  "version": "0.0.0-development",
+  "version": "0.2.2",
   "description": "EditorConfig core library for JXA (JavaScript for Automation) on macOS",
   "keywords": [
     "jxa",

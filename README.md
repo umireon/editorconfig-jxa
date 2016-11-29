@@ -1,5 +1,7 @@
 # editorconfig-jxa
 
+[![Build Status](https://travis-ci.org/umireon/editorconfig-jxa.svg?branch=master)](https://travis-ci.org/umireon/editorconfig-jxa)
+
 EditorConfig core library for JXA (JavaScript for Automation) on macOS
 
 ## Installation

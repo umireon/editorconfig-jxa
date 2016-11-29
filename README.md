@@ -3,6 +3,7 @@
 [![NPM](https://nodei.co/npm/editorconfig-jxa.png)](https://nodei.co/npm/editorconfig-jxa/)
 
 [![Build Status](https://travis-ci.org/umireon/editorconfig-jxa.svg?branch=master)](https://travis-ci.org/umireon/editorconfig-jxa)
+[![npm version](https://badge.fury.io/js/editorconfig-jxa.svg)](https://badge.fury.io/js/editorconfig-jxa)
 [![devDependencies Status](https://david-dm.org/umireon/editorconfig-jxa/dev-status.svg)](https://david-dm.org/umireon/editorconfig-jxa?type=dev)
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)

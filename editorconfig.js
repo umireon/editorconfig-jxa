@@ -1,5 +1,5 @@
-import * as fs from './jxa-fs'
-import * as path from './jxa-path'
+import * as fs from 'fs'
+import * as path from 'path'
 import minimatch from 'minimatch'
 import iniparser from 'editorconfig/lib/ini'
 import Version from 'editorconfig/lib/version'

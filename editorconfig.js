@@ -1,9 +1,3 @@
-/*!
- * editorconfig-core-jxa v0.1.0
- * Copyright (c) 2016 Kaito Udagawa
- * Released under the MIT license
- */
-
 import * as fs from './jxa-fs'
 import * as path from './jxa-path'
 import minimatch from 'minimatch'

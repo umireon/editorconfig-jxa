@@ -27,7 +27,8 @@
     "cjs": "rollup -c -f cjs -o dist/editorconfig.js",
     "es": "rollup -c -f es -o dist/editorconfig.mjs",
     "scpt": "rollup -c -f cjs --intro '!function(exports){' --outro '}(this)' | osacompile -l JavaScript -o dist/editorconfig.scpt",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "standard"
   },
   "config": {
     "commitizen": {

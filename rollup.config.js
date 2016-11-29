@@ -1,7 +1,7 @@
 import alias from 'rollup-plugin-alias'
 import commonjs from 'rollup-plugin-commonjs'
+import json from 'rollup-plugin-json'
 import nodeResolve from 'rollup-plugin-node-resolve'
-import replace from 'rollup-plugin-replace'
 
 import { join } from 'path'
 
@@ -22,18 +22,11 @@ export default {
   ].join('\n'),
   plugins: [
     alias({
-      fs: join(__dirname, '/jxa-fs')
-    }),
-    replace({
-      include: require.resolve('minimatch'),
-      'path = require': '',
-      'path\\.sep': '/'
-    }),
-    replace({
-      include: 'editorconfig.js',
-      'pkg.version': JSON.stringify(pkg.version)
+      fs: join(__dirname, '/jxa-fs'),
+      path: join(__dirname, '/jxa-path'),
     }),
     nodeResolve(),
     commonjs(),
+    json(),
   ]
 }

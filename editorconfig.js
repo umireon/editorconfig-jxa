@@ -3,6 +3,7 @@ import * as path from './jxa-path'
 import minimatch from 'minimatch'
 import iniparser from 'editorconfig/lib/ini'
 import Version from 'editorconfig/lib/version'
+import { version as pkgVersion } from 'editorconfig/package.json'
 
 var knownProps = {
   end_of_line: true,
@@ -57,7 +58,7 @@ function processOptions (options, filepath) {
   options = options || {}
   return {
     config: options.config || '.editorconfig',
-    version: new Version(options.version || pkg.version),
+    version: new Version(options.version || pkgVersion),
     root: path.resolve(options.root || '/')
   }
 }

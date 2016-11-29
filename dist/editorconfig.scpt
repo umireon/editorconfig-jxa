@@ -1,4 +1,4 @@
-JsOsaDAS1.001.00bplist00—Vscript_ú÷/*! editorconfig-jxa v0.2.0 */
+JsOsaDAS1.001.00bplist00—Vscript_ù1/*! editorconfig-jxa v0.2.2 */
 'use strict';
 
 !function(exports){
@@ -27,6 +27,16 @@ function dirname (path) {
 function join (path) {
   return $.NSString.pathWithComponents(Array.from(arguments)).js
 }
+
+var sep = '/';
+
+
+var jxaPath = Object.freeze({
+	resolve: resolve,
+	dirname: dirname,
+	join: join,
+	sep: sep
+});
 
 var index$2 = function (xs, fn) {
     var res = [];
@@ -298,8 +308,15 @@ function expand$1(str, isTop) {
   return expansions;
 }
 
+var require$$1$1 = ( jxaPath && jxaPath['default'] ) || jxaPath;
+
 var minimatch_1 = minimatch;
 minimatch.Minimatch = Minimatch;
+
+var path = { sep: '/' };
+try {
+  path = require$$1$1;
+} catch (er) {}
 
 var GLOBSTAR = minimatch.GLOBSTAR = Minimatch.GLOBSTAR = {};
 var expand = index;
@@ -415,8 +432,8 @@ function Minimatch (pattern, options) {
   pattern = pattern.trim();
 
   // windows support: need to use /, not \
-  if (undefined !== '/') {
-    pattern = pattern.split(undefined).join('/');
+  if (path.sep !== '/') {
+    pattern = pattern.split(path.sep).join('/');
   }
 
   this.options = options;
@@ -872,7 +889,7 @@ function parse$1 (pattern, isSub) {
     nlLast += nlAfter;
 
     // Handle nested stuff like *(*.js|!(*.json)), where open parens
-    // mean that we should *not* /Users/umireon/git/umireon/editorconfig-jxa/node_modules/minimatch/minimatch.js the ) in the bit that is considered
+    // mean that we should *not* include the ) in the bit that is considered
     // "after" the negated section.
     var openParensBefore = nlBefore.split('(').length - 1;
     var cleanAfter = nlAfter;
@@ -1004,8 +1021,8 @@ function match (f, partial) {
   var options = this.options;
 
   // windows: need to use /, not \
-  if (undefined !== '/') {
-    f = f.split(undefined).join('/');
+  if (path.sep !== '/') {
+    f = f.split(path.sep).join('/');
   }
 
   // treat the test path as a set of pathparts.
@@ -1340,11 +1357,7 @@ Version.prototype = {
 
 var version = Version;
 
-/*!
- * editorconfig-core-jxa v0.1.0
- * Copyright (c) 2016 Kaito Udagawa
- * Released under the MIT license
- */
+var version$1 = "0.13.2";
 
 var knownProps = {
   end_of_line: true,
@@ -1399,7 +1412,7 @@ function processOptions (options, filepath) {
   options = options || {};
   return {
     config: options.config || '.editorconfig',
-    version: new version(options.version || "0.13.2"),
+    version: new version(options.version || version$1),
     root: resolve(options.root || '/')
   }
 }
@@ -1514,4 +1527,4 @@ exports.parse = parse$$1;
  * editorconfig-core-js 0.13.2: EditorConfig Team (MIT)
  * minimatch 3.0.3: Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me) (ISC)
  */
-                              úÏjscr  ˙ﬁﬁ≠
+                              ùG jscr  ˙ﬁﬁ≠

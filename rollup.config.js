@@ -5,8 +5,6 @@ import nodeResolve from 'rollup-plugin-node-resolve'
 
 import { join } from 'path'
 
-import pkg from 'editorconfig/package.json'
-
 export default {
   entry: 'editorconfig.js',
   moduleName: 'editorconfig',
@@ -18,15 +16,15 @@ export default {
     ` *`,
     ` * editorconfig-core-js ${require('editorconfig/package.json').version}: ${require('editorconfig/package.json').author} (${require('editorconfig/package.json').license.type})`,
     ` * minimatch ${require('minimatch/package.json').version}: ${require('minimatch/package.json').author} (${require('minimatch/package.json').license})`,
-    ` */`,
+    ` */`
   ].join('\n'),
   plugins: [
     alias({
       fs: join(__dirname, '/jxa-fs'),
-      path: join(__dirname, '/jxa-path'),
+      path: join(__dirname, '/jxa-path')
     }),
     nodeResolve(),
     commonjs(),
-    json(),
+    json()
   ]
 }

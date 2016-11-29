@@ -1,3 +1,5 @@
+/* global $ */
+
 export function resolve (path) {
   return $(path).stringByStandardizingPath.js
 }

@@ -1,3 +1,5 @@
+/* global $ */
+
 export function readFileSync (file, encoding) {
   const error = $()
   const nsstr = $.NSString.stringWithContentsOfFileEncodingError(file, encoding, error)

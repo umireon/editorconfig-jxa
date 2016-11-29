@@ -54,7 +54,6 @@ function processMatches (matches, version) {
 }
 
 function processOptions (options, filepath) {
-  /* global pkg */
   options = options || {}
   return {
     config: options.config || '.editorconfig',

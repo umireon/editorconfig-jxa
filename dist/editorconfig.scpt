@@ -1,4 +1,4 @@
-JsOsaDAS1.001.00bplist00—Vscript_ù1/*! editorconfig-jxa v0.2.2 */
+JsOsaDAS1.001.00bplist00—Vscript_ù=/*! editorconfig-jxa v0.0.0-development */
 'use strict';
 
 !function(exports){
@@ -1527,4 +1527,4 @@ exports.parse = parse$$1;
  * editorconfig-core-js 0.13.2: EditorConfig Team (MIT)
  * minimatch 3.0.3: Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me) (ISC)
  */
-                              ùG jscr  ˙ﬁﬁ≠
+                              ùS jscr  ˙ﬁﬁ≠

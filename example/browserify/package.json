@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "editorconfig-jxa": "file:../.."
+  },
+  "scripts": {
+    "build": "browserify index.js -o bundle.js",
+    "test": "npm run build && osascript bundle.js"
+  }
+}

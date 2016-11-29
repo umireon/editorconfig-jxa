@@ -4,6 +4,6 @@ build
 dist/**/*
 !dist/*.scpt
 
-example/**/*
+example/*/*
 !example/*/package.json
 !example/*/index.js

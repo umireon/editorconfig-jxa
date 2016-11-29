@@ -1,5 +1,7 @@
 # editorconfig-jxa
 
+[![NPM](https://nodei.co/npm/editorconfig-jxa.png)](https://nodei.co/npm/editorconfig-jxa/)
+
 [![Build Status](https://travis-ci.org/umireon/editorconfig-jxa.svg?branch=master)](https://travis-ci.org/umireon/editorconfig-jxa)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 

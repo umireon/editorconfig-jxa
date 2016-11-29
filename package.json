@@ -1,6 +1,6 @@
 {
   "name": "editorconfig-jxa",
-  "version": "0.2.1",
+  "version": "0.0.0-development",
   "description": "EditorConfig core library for JXA (JavaScript for Automation) on macOS",
   "keywords": [
     "jxa",
@@ -18,12 +18,16 @@
   ],
   "main": "dist/editorconfig.js",
   "module": "dist/editorconfig.mjs",
-  "repository": "umireon/editorconfig-jxa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umireon/editorconfig-jxa.git"
+  },
   "scripts": {
     "build": "npm run cjs && npm run es && npm run scpt",
     "cjs": "rollup -c -f cjs -o dist/editorconfig.js",
     "es": "rollup -c -f es -o dist/editorconfig.mjs",
-    "scpt": "rollup -c -f cjs --intro '!function(exports){' --outro '}(this)' | osacompile -l JavaScript -o dist/editorconfig.scpt"
+    "scpt": "rollup -c -f cjs --intro '!function(exports){' --outro '}(this)' | osacompile -l JavaScript -o dist/editorconfig.scpt",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "devDependencies": {
     "editorconfig": "^0.13.2",
@@ -36,7 +40,8 @@
     "rollup-plugin-alias": "^1.2.0",
     "rollup-plugin-commonjs": "^5.0.5",
     "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-replace": "^1.1.1"
+    "rollup-plugin-replace": "^1.1.1",
+    "semantic-release": "^6.3.2"
   },
   "os": [
     "darwin"

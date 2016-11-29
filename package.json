@@ -1,6 +1,6 @@
 {
   "name": "editorconfig-jxa",
-  "version": "0.2.3",
+  "version": "0.0.0-development",
   "description": "EditorConfig core library for JXA (JavaScript for Automation) on macOS",
   "keywords": [
     "jxa",
@@ -29,6 +29,11 @@
     "scpt": "rollup -c -f cjs --intro '!function(exports){' --outro '}(this)' | osacompile -l JavaScript -o dist/editorconfig.scpt",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
     "cz-conventional-changelog": "^1.2.0",
     "editorconfig": "^0.13.2",
@@ -46,10 +51,5 @@
   },
   "os": [
     "darwin"
-  ],
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  }
+  ]
 }

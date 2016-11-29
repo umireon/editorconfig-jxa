@@ -1,16 +1,42 @@
 {
-  "name": "editorconfig-core-jxa",
-  "version": "0.1.0",
-  "main": "index.js",
+  "name": "editorconfig-jxa",
+  "version": "0.2.0",
+  "main": "dist/editorconfig.cjs.js",
+  "module": "dist/editorconfig.es.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "npm run cjs && npm run es && npm run scpt && npm run umd",
+    "cjs": "rollup -c -f cjs -o dist/editorconfig.cjs.js",
+    "es": "rollup -c -f es -o dist/editorconfig.es.js",
+    "scpt": "rollup -c -f cjs --banner '!function(exports){' --outro '}(this)' | osacompile -l JavaScript -o dist/editorconfig.scpt",
+    "umd": "rollup -c -f umd -o dist/editorconfig.js"
   },
   "devDependencies": {
     "editorconfig": "^0.13.2",
-    "imports-loader": "^0.6.5",
-    "json-loader": "^0.5.4",
-    "string-replace-loader": "^1.0.5",
-    "webpack": "^2.1.0-beta"
-  }
+    "eslint": "^3.11.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "minimatch": "^3.0.3",
+    "rollup": "^0.36.4",
+    "rollup-plugin-alias": "^1.2.0",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1"
+  },
+  "description": "EditorConfig core library for JXA (JavaScript for Automation) on macOS",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umireon/editorconfig-core-jxa.git"
+  },
+  "keywords": [
+    "jxa",
+    "osx",
+    "macos"
+  ],
+  "author": "Kaito Udagawa <umireon@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/umireon/editorconfig-core-jxa/issues"
+  },
+  "homepage": "https://github.com/umireon/editorconfig-core-jxa#readme"
 }

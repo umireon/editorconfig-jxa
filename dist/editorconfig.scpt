@@ -1,8 +1,7 @@
-(function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-    typeof define === 'function' && define.amd ? define(['exports'], factory) :
-    (factory((global.editorconfig = global.editorconfig || {})));
-}(this, (function (exports) { 'use strict';
+JsOsaDAS1.001.00bplist00ÑVscript_œº!function(exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
 
 /*!
  * editorconfig-core-jxa v0.1.0
@@ -1518,7 +1517,5 @@ exports.parseFromFilesSync = parseFromFilesSync;
 exports.parseSync = parseSync$$1;
 exports.parseFromFiles = parseFromFiles;
 exports.parse = parse$$1;
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+}(this)
+editorconfig                              œÐjscr  úÞÞ­

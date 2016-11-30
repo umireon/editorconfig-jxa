@@ -7,5 +7,7 @@ test('setTimeout', function (t) {
   }, 50)
 })
 
+module.exports = undefined
+
 if (setTimeout.run) setTimeout.run()
 

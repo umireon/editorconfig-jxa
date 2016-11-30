@@ -1,8 +1,10 @@
-JsOsaDAS1.001.00bplist00—Vscript_ù=/*! editorconfig-jxa v0.0.0-development */
+JsOsaDAS1.001.00bplist00—Vscript_ùJ/*! editorconfig-jxa v0.0.0-development */
 'use strict';
 
 !function(exports){
 Object.defineProperty(exports, '__esModule', { value: true });
+
+/* global $ */
 
 function readFileSync (file, encoding) {
   const error = $();
@@ -15,6 +17,8 @@ function readFileSync (file, encoding) {
 var jxaFs = Object.freeze({
 	readFileSync: readFileSync
 });
+
+/* global $ */
 
 function resolve (path) {
   return $(path).stringByStandardizingPath.js
@@ -1408,7 +1412,6 @@ function processMatches (matches, version$$1) {
 }
 
 function processOptions (options, filepath) {
-  /* global pkg */
   options = options || {};
   return {
     config: options.config || '.editorconfig',
@@ -1527,4 +1530,4 @@ exports.parse = parse$$1;
  * editorconfig-core-js 0.13.2: EditorConfig Team (MIT)
  * minimatch 3.0.3: Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me) (ISC)
  */
-                              ùS jscr  ˙ﬁﬁ≠
+                              ù`jscr  ˙ﬁﬁ≠

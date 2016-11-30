@@ -6,7 +6,7 @@ import nodeResolve from 'rollup-plugin-node-resolve'
 import { join } from 'path'
 
 export default {
-  entry: 'editorconfig.js',
+  entry: 'index.js',
   moduleName: 'editorconfig',
   banner: `/*! editorconfig-jxa v${require('./package.json').version} */`,
   footer: [

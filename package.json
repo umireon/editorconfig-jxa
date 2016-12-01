@@ -17,15 +17,13 @@
     "dist/*"
   ],
   "main": "dist/editorconfig.js",
-  "module": "dist/editorconfig.mjs",
   "repository": {
     "type": "git",
     "url": "https://github.com/umireon/editorconfig-jxa.git"
   },
   "scripts": {
-    "build": "npm run cjs && npm run es && npm run scpt",
+    "build": "npm run cjs && npm run scpt",
     "cjs": "rollup -c -f cjs -o dist/editorconfig.js",
-    "es": "rollup -c -f es -o dist/editorconfig.mjs",
     "scpt": "rollup -c -f cjs --intro '!function(exports){' --outro '}(this)' | osacompile -l JavaScript -o dist/editorconfig.scpt",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "standard && npm run test:node",

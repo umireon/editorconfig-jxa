@@ -10,4 +10,3 @@ test('setTimeout', function (t) {
 module.exports = undefined
 
 if (setTimeout.run) setTimeout.run()
-

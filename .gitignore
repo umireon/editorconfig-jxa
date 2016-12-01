@@ -9,4 +9,3 @@ example/*/*
 !example/*/index.js
 
 test/*.bundle.js
-

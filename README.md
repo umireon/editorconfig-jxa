@@ -47,4 +47,3 @@ Place `editorconfig.scpt` into an OSA library path (e.g. `~/Library/Script Libra
 var editorconfig = Library('editorconfig')
 parseSync('~/file.js')
 ```
-

@@ -35,7 +35,7 @@ editorconfig.parseSync('~/file.js')
 ### via Rollup
 
 ```javascript
-import { parse } from 'editorconfig-jxa'
+import { parseSync } from 'editorconfig-jxa'
 parseSync('~/file.js')
 ```
 
@@ -51,5 +51,5 @@ Use the library with `Library`:
 
 ```javascript
 var editorconfig = Library('editorconfig')
-parseSync('~/file.js')
+editorconfig.parseSync('~/file.js')
 ```

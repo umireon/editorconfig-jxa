@@ -1,10 +1,10 @@
 const webpack = require('webpack')
 const path = require('path')
 module.exports = {
-  entry: path.join(__dirname, 'index.js'),
+  entry: path.join(__dirname, 'test.js'),
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'index.js'
+    path: path.join(__dirname, '..', 'dist'),
+    filename: 'test.js'
   },
   plugins: [
     new webpack.DefinePlugin({

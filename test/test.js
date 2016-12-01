@@ -1,5 +1,5 @@
 var test = require('tape')
-var editorconfig = process.browser ? require('..') : require('../index.js')
+var editorconfig = process.browser ? require('../dist/editorconfig') : require('../lib/editorconfig')
 
 test('parseSync', function (t) {
   t.plan(1)

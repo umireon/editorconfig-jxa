@@ -44,7 +44,7 @@ parseSync('~/file.js')
 Install the library with `install-osa.sh`:
 
 ```sh
-$ curl -fsSL https://raw.githubusercontent.com/umireon/editorconfig-jxa/install-scpt/install-osa.sh | bash
+$ curl -fsSL https://raw.githubusercontent.com/umireon/editorconfig-jxa/master/install-osa.sh | bash
 ```
 
 Use the library with `Library`:

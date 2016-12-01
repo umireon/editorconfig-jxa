@@ -1,8 +1,7 @@
 node_modules
 build
 
-dist/**/*
-!dist/*.scpt
+dist
 
 example/*/*
 !example/*/package.json

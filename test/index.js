@@ -1,10 +1,15 @@
 var test = require('tape')
+var editorconfig = process.browser ? require('..') : require('../index.js')
 
-test('setTimeout', function (t) {
-  setTimeout(function () {
-    console.log(123)
-    t.end()
-  }, 50)
+test('parseSync', function (t) {
+  t.plan(1)
+
+  t.deepEqual(
+    editorconfig.parseSync('test/fixture/test.sh'),
+    {}
+  )
+
+  t.end()
 })
 
 module.exports = undefined

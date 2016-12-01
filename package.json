@@ -28,7 +28,8 @@
     "es": "rollup -c -f es -o dist/editorconfig.mjs",
     "scpt": "rollup -c -f cjs --intro '!function(exports){' --outro '}(this)' | osacompile -l JavaScript -o dist/editorconfig.scpt",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "standard && npm run test:osa",
+    "test": "standard && npm run test:node",
+    "test:node": "babel-node test/index.js -b es2015",
     "test:osa": "cd test && webpack && osascript index.bundle.js"
   },
   "config": {
@@ -37,6 +38,8 @@
     }
   },
   "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
     "cz-conventional-changelog": "^1.2.0",
     "editorconfig": "^0.13.2",
     "minimatch": "^3.0.3",
@@ -47,6 +50,7 @@
     "rollup-plugin-node-resolve": "^2.0.0",
     "semantic-release": "^6.3.2",
     "standard": "^8.6.0",
+    "tape": "^4.6.3",
     "webpack": "^2.1.0-beta"
   }
 }

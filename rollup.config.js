@@ -7,6 +7,8 @@ import { join } from 'path'
 
 export default {
   entry: 'lib/editorconfig.js',
+  dest: 'dist/editorconfig.js',
+  format: 'cjs',
   moduleName: 'editorconfig',
   banner: `/*! editorconfig-jxa v${require('./package.json').version} */`,
   footer: [

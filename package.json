@@ -27,7 +27,7 @@
     "scpt": "rollup -c -f cjs --intro '!function(exports){' --outro '}(this)' | osacompile -l JavaScript -o dist/editorconfig.scpt",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "standard && babel-node test/index.js -b es2015",
-    "test:osa": "npm run cjs && cd test && webpack && osascript index.bundle.js"
+    "test:osa": "npm run cjs && webpack --config test/webpack.config.js && osascript test/dist/index.js"
   },
   "config": {
     "commitizen": {

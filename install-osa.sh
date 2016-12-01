@@ -13,6 +13,7 @@ else
 fi
 
 echo "installing $INSTALL_DIR/$NAME.scpt ..."
+mkdir -p "$INSTALL_DIR"
 curl -fL "https://github.com/$USER/$NAME/releases/download/$TAG/$NAME.scpt" -o "$INSTALL_DIR/$NAME.scpt"
 
 echo "$NAME is installed"

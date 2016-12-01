@@ -6,10 +6,10 @@ import nodeResolve from 'rollup-plugin-node-resolve'
 import { join } from 'path'
 
 function license (options = {}) {
-  const pkg = require('./package.json')
+  var pkg = require('./package.json')
 
   function bundled (name) {
-    const p = require(join(name, 'package.json'))
+    var p = require(join(name, 'package.json'))
     return ` * ${p.name} ${p.version}: ${p.author} (${p.license.type || p.license})`
   }
 

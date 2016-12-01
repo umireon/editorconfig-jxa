@@ -26,5 +26,6 @@ export default {
     nodeResolve(),
     commonjs(),
     json()
-  ]
+  ],
+  exports: 'named'
 }

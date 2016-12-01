@@ -1,9 +1,9 @@
-import * as fs from 'fs'
-import * as path from 'path'
-import minimatch from 'minimatch'
-import iniparser from 'editorconfig/lib/ini'
-import Version from 'editorconfig/lib/version'
-import { version as pkgVersion } from 'editorconfig/package.json'
+var fs = require('fs')
+var path = require('path')
+var minimatch = require('minimatch')
+var iniparser = require('editorconfig/lib/ini')
+var Version = require('editorconfig/lib/version')
+var pkgVersion = require('editorconfig/package.json').version
 
 var knownProps = {
   end_of_line: true,
@@ -138,13 +138,13 @@ function readConfigFilesSync (filepaths) {
   return files
 }
 
-export function parseFromFilesSync (filepath, files, options) {
+function parseFromFilesSync (filepath, files, options) {
   filepath = path.resolve(filepath)
   options = processOptions(options, filepath)
   return parseFromFilesSyncImpl(filepath, files, options)
 }
 
-export function parseSync (filepath, options) {
+function parseSync (filepath, options) {
   filepath = path.resolve(filepath)
   options = processOptions(options, filepath)
   var filepaths = getConfigFileNames(filepath, options)
@@ -152,10 +152,15 @@ export function parseSync (filepath, options) {
   return parseFromFilesSyncImpl(filepath, files, options)
 }
 
-export function parseFromFiles (filepath, files, options) {
+function parseFromFiles (filepath, files, options) {
   return Promise.resolve(parseFromFilesSync(filepath, files, options))
 }
 
-export function parse (filepath, options) {
+function parse (filepath, options) {
   return Promise.resolve(parseSync(filepath, options))
 }
+
+exports.parseFromFilesSync = parseFromFilesSync
+exports.parseSync = parseSync
+exports.parseFromFiles = parseFromFiles
+exports.parse = parse

@@ -1,4 +1,5 @@
 #!/bin/bash
+# requires https://github.com/aktau/github-release
 
 export NPM_CONFIG_PROGRESS=false
 NAME=$(npm view . name)

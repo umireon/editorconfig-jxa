@@ -1,19 +1,20 @@
 const webpack = require('webpack')
 const path = require('path')
 module.exports = {
-  entry: './index.js',
+  entry: path.join(__dirname, 'index.js'),
   output: {
-    filename: 'index.bundle.js'
+    path: path.join(__dirname, 'dist'),
+    filename: 'index.js'
   },
   plugins: [
     new webpack.DefinePlugin({
       'process.browser': true
     }),
     new webpack.ProvidePlugin({
-      setTimeout: path.join(__dirname, '/jxa-timeout/setTimeout'),
-      clearTimeout: path.join(__dirname, '/jxa-timeout/clearTimeout'),
-      setInterval: path.join(__dirname, '/jxa-timeout/setInterval'),
-      clearInterval: path.join(__dirname, '/jxa-timeout/clearInterval')
+      setTimeout: path.join(__dirname, 'jxa-timeout/setTimeout'),
+      clearTimeout: path.join(__dirname, 'jxa-timeout/clearTimeout'),
+      setInterval: path.join(__dirname, 'jxa-timeout/setInterval'),
+      clearInterval: path.join(__dirname, 'jxa-timeout/clearInterval')
     })
   ],
   node: {

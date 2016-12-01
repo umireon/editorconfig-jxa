@@ -1,11 +1,8 @@
 node_modules
 build
-
-dist/**/*
-!dist/*.scpt
+dist
+*.scpt
 
 example/*/*
 !example/*/package.json
 !example/*/index.js
-
-test/*.bundle.js

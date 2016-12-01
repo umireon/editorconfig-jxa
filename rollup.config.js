@@ -20,8 +20,8 @@ export default {
   ].join('\n'),
   plugins: [
     alias({
-      fs: join(__dirname, '/jxa-fs'),
-      path: join(__dirname, '/jxa-path')
+      fs: join(__dirname, '/lib/jxa-fs'),
+      path: join(__dirname, '/lib/jxa-path')
     }),
     nodeResolve(),
     commonjs(),

@@ -41,7 +41,13 @@ parseSync('~/file.js')
 
 ### via [JXA native `Library`](https://developer.apple.com/library/content/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW14)
 
-Place `editorconfig.scpt` into an OSA library path (e.g. `~/Library/Script Libraries`).
+Install the library with `install-osa.sh`:
+
+```sh
+$ curl -fsSL https://raw.githubusercontent.com/umireon/editorconfig-jxa/install-scpt/install-osa.sh | bash
+```
+
+Use the library with `Library`:
 
 ```javascript
 var editorconfig = Library('editorconfig')

@@ -15,7 +15,6 @@
   "author": "Kaito Udagawa <umireon@gmail.com>",
   "files": [
     "dist/editorconfig.js",
-    "index.js",
     "lib"
   ],
   "main": "dist/editorconfig.js",
@@ -28,7 +27,7 @@
     "cjs": "rollup -c -f cjs -o dist/editorconfig.js",
     "scpt": "rollup -c -f cjs --intro '!function(exports){' --outro '}(this)' | osacompile -l JavaScript -o dist/editorconfig.scpt",
     "semantic-release": "semantic-release pre && npm run cjs && npm publish && semantic-release post",
-    "test": "standard && node test/index.js",
+    "test": "standard && node test/test.js",
     "test:osa": "npm run cjs && webpack --config test/webpack.config.js && osascript dist/test.js"
   },
   "config": {

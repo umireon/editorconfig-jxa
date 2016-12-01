@@ -13,9 +13,6 @@
   },
   "license": "MIT",
   "author": "Kaito Udagawa <umireon@gmail.com>",
-  "files": [
-    "dist/*"
-  ],
   "main": "dist/editorconfig.js",
   "repository": {
     "type": "git",

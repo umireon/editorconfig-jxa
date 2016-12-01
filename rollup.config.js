@@ -5,19 +5,35 @@ import nodeResolve from 'rollup-plugin-node-resolve'
 
 import { join } from 'path'
 
+function license (options = {}) {
+  const pkg = require('./package.json')
+
+  function bundled (name) {
+    const p = require(join(name, 'package.json'))
+    return ` * ${p.name} ${p.version}: ${p.author} (${p.license.type || p.license})`
+  }
+
+  return {
+    banner: () => `/*! ${pkg.name} v${pkg.version} */`,
+    footer: () => {
+      return [
+        `/*!`,
+        ` * Copyright (c) 2016 ${pkg.author}`,
+        ` * Released under the ${pkg.license} license`,
+        ` *`,
+        bundled('editorconfig'),
+        bundled('minimatch'),
+        ` */`
+      ].join('\n')
+    }
+  }
+}
+
 export default {
   entry: 'lib/editorconfig.js',
+  dest: 'dist/editorconfig.js',
+  format: 'cjs',
   moduleName: 'editorconfig',
-  banner: `/*! editorconfig-jxa v${require('./package.json').version} */`,
-  footer: [
-    `/*!`,
-    ` * Copyright (c) 2016 ${require('./package.json').author}`,
-    ` * Released under the ${require('./package.json').license} license`,
-    ` *`,
-    ` * editorconfig-core-js ${require('editorconfig/package.json').version}: ${require('editorconfig/package.json').author} (${require('editorconfig/package.json').license.type})`,
-    ` * minimatch ${require('minimatch/package.json').version}: ${require('minimatch/package.json').author} (${require('minimatch/package.json').license})`,
-    ` */`
-  ].join('\n'),
   plugins: [
     alias({
       fs: join(__dirname, '/lib/jxa-fs'),
@@ -25,7 +41,8 @@ export default {
     }),
     nodeResolve(),
     commonjs(),
-    json()
+    json(),
+    license()
   ],
   exports: 'named'
 }

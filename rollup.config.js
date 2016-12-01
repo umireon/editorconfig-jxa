@@ -8,7 +8,7 @@ import { join } from 'path'
 function license (options = {}) {
   const pkg = require('./package.json')
 
-  function bundled(name) {
+  function bundled (name) {
     const p = require(join(name, 'package.json'))
     return ` * ${p.name} ${p.version}: ${p.author} (${p.license.type || p.license})`
   }

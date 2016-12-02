@@ -22,6 +22,10 @@ npm install editorconfig-jxa
 ## Usage
 
 Implements [editorconfig-core-jxa API](https://github.com/editorconfig/editorconfig-core-js/blob/master/README.md#usage)
+Asynchronous API is not supported.
+
+* `parse(filePath[, options])`
+* `parseFromFilesSync(filePath, configs[, options])`
 
 ## Example
 

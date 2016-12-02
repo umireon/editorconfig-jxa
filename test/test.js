@@ -7,8 +7,6 @@ if (process.browser) {
 
 var test = require('tape')
 
-var parseFromFiles = editorconfig.parseFromFiles
-var parse = editorconfig.parse
 var parseFromFilesSync = editorconfig.parseFromFilesSync
 var parseSync = editorconfig.parseSync
 
@@ -28,23 +26,9 @@ test('parseSync', function (t) {
   )
 })
 
-test('parse', function (t) {
-  t.plan(1)
-  parse('test/fixture/test.sh').then(function (config) {
-    t.deepEqual(config, simple)
-  })
-})
-
 test('parseFromFilesSync', function (t) {
   t.plan(1)
   t.deepEqual(parseFromFilesSync('test/fixture/test.sh', configs), simple)
-})
-
-test('parseFromFilesSync', function (t) {
-  t.plan(1)
-  parseFromFiles('test/fixture/test.sh', configs).then(function (config) {
-    t.deepEqual(config, simple)
-  })
 })
 
 var allFields = {
